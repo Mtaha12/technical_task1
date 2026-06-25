@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+@theme {
+  --color-obsidian: #FAF8F5; /* Canvas background: warm vellum */
+  --color-ivory: #121212;    /* Primary text: deep matte charcoal */
+  --color-graphite: #FFFFFF; /* Panels/Cards: clean white */
+  --color-sand: #6E6E73;     /* Muted/secondary text: neutral gray */
+  --color-copper: #121212;   /* Interactive/Accent: solid charcoal */
+  --color-clay: #B85C4B;     /* Alert/Danger: soft terracotta */
+  --color-gold: #4D4038;     /* Warm-neutral dark gray */
+  --color-stone: #E5E5E7;    /* Divider lines / structural borders */
+  
+  --font-sans: var(--font-geist-sans), sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
+:root {
+  --background: #FAF8F5;
+  --foreground: #121212;
+}
+
+.dark {
+  --background: #0B0B0C;
+  --foreground: #F7F4EE;
+  
+  --color-obsidian: #0B0B0C; /* Canvas background: obsidian */
+  --color-ivory: #F7F4EE;    /* Primary text: ivory */
+  --color-graphite: #1C1C1E; /* Panels/Cards: graphite */
+  --color-sand: #C9B9A3;     /* Muted/secondary text: sand */
+  --color-copper: #A66A44;   /* Interactive/Accent: copper */
+  --color-clay: #8D4A39;     /* Alert/Danger: clay */
+  --color-gold: #D4AF37;     /* Gold highlight */
+  --color-stone: #2C2C2F;    /* Divider lines / structural borders */
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-stone);
+  border-radius: 9999px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-sand);
+}
+
+/* Custom text selection */
+::selection {
+  background-color: var(--color-ivory);
+  color: var(--color-obsidian);
+}
+
+/* Fine border styles */
+.fine-border {
+  border: 1px solid rgba(18, 18, 18, 0.08);
+}
+
+.dark .fine-border {
+  border-color: rgba(247, 244, 238, 0.08);
+}
+
+.fine-border-b {
+  border-bottom: 1px solid rgba(18, 18, 18, 0.08);
+}
+
+.dark .fine-border-b {
+  border-bottom-color: rgba(247, 244, 238, 0.08);
+}
+
+.fine-border-t {
+  border-top: 1px solid rgba(18, 18, 18, 0.08);
+}
+
+.dark .fine-border-t {
+  border-top-color: rgba(247, 244, 238, 0.08);
+}
+
+.fine-border-r {
+  border-right: 1px solid rgba(18, 18, 18, 0.08);
+}
+
+.dark .fine-border-r {
+  border-right-color: rgba(247, 244, 238, 0.08);
+}
+
+.fine-border-l {
+  border-left: 1px solid rgba(18, 18, 18, 0.08);
+}
+
+.dark .fine-border-l {
+  border-left-color: rgba(247, 244, 238, 0.08);
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Luxury card gloss backdrop */
+.card-gloss {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(18, 18, 18, 0.06);
+}
+
+.dark .card-gloss {
+  background: rgba(44, 44, 47, 0.25);
+  border-color: rgba(201, 185, 163, 0.1);
+}
+
+/* Architectural sketchbook layout */
+.bg-dot-grid {
+  background-size: 24px 24px;
+  background-image: radial-gradient(rgba(18, 18, 18, 0.04) 1px, transparent 1px);
+}
+
+.dark .bg-dot-grid {
+  background-image: radial-gradient(rgba(247, 244, 238, 0.03) 1px, transparent 1px);
+}
+
+
