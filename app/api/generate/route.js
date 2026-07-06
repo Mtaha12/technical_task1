@@ -3,7 +3,7 @@ import { generateContent } from '@/lib/mockApi';
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { prompt, style, aspectRatio, quality, type } = body;
+    const { prompt, style, aspectRatio, quality, type, seed, creativity, guidance, negativePrompt } = body;
 
     if (!prompt || prompt.trim() === '') {
       return new Response(
@@ -17,7 +17,11 @@ export async function POST(request) {
       style,
       aspectRatio,
       quality,
-      type
+      type,
+      seed,
+      creativity,
+      guidance,
+      negativePrompt
     });
 
     return new Response(
